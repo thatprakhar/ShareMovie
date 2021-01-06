@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, ActivityIndicator, View } from 'react-native';
+import { StyleSheet, ActivityIndicator, View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Login from './components/Login';
@@ -104,6 +104,7 @@ export default function App() {
             {props => <Settings {...props} logout={logout}/>}
           </Stack.Screen>
         </Stack.Navigator>
+        <StatusBar/>
       </NavigationContainer>
   );
 }
